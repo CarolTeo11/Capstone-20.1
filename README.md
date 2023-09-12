@@ -5,7 +5,7 @@
 
 ### Executive summary
 
-This project uses routine survey data from Kenya to predict depression.  In rural areas where psychiatric help is limited, it is important to be able to accurate predict the 
+This project uses routine survey data from Kenya to predict depression.  In rural areas where psychiatric help is limited, it is important to be able to accurately predict the illness so that valuable resources can be allocated to assess and treat these cases.   
 
 #### Background
 
@@ -28,23 +28,174 @@ Hence, in this assessment, i hope to be able to predict true positive with high 
 What are you trying to answer?
 
 Classify, with high accuracy, the personnels with depression.  
-Measures of Effectiveness:  Minimize False Negative ==> Metrics: Maximise Recall = True Positive/ (True Positive + False Negative) 
-Minimize False Postive (to minimise unnecessary resources allocated) ==> Metrics: Maximize Precision = True Positive/ (True Positive + False Positive) 
+
+Measures of Effectiveness:  
+1.  Minimize False Negative ==> Metrics: Maximise Recall = True Positive/ (True Positive + False Negative) 
+2.  Minimize False Postive (to minimise unnecessary resources allocated) ==> Metrics: Maximize Precision = True Positive/ (True Positive + False Positive) 
 
 
 ### Data Sources
 What data will you use to answer you question?
 
+I obtained a set of data from Kaggl for this analysis. The web address is https://www.kaggle.com/datasets/diegobabativa/depression
 
+I have also uploaded the dataset for easy reference.  
+
+Most of the entries are self-explanatory.
+
+Survey_id
+
+Ville_id
+
+sex
+
+Age
+
+Married
+
+Number_children
+
+education_level
+
+total_members (in the family)
+
+gained_asset
+
+durable_asset
+
+save_asset
+
+living_expenses
+
+other_expenses
+
+incoming_salary
+
+incoming_own_farm
+
+incoming_business
+
+incoming_no_business
+
+incoming_agricultural
+
+farm_expenses
+
+labor_primary
+
+lasting_investment
+
+no_lasting_investmen
+
+depressed: target data, with [Zero: No depressed] and [One: depressed] (Binary for target class)
+
+The data was split 70-30 into the train and test sets.
 
 ### Methodology
 What methods are you using to answer the question?
 
+In this example, I used a few methodologies for 'binary' classification models, namely, KNN, Logistic Regression, SVM, and Decision Tree.  
+
+Thereafter, I used GridSearch CV to optimise the results on Logistic Regression and KNN.
+
+
 ### Results
 What did your research find?
 
+#### Statistical Analysis on the dataset
+First, it was observed that the dataset is an imbalanced dataset with 16.68% being diagnosed as depressed.  This implies that if we deploy a very simple model that categorises all individuals as being no-depressed, then our accuracy would already have been 83.32%.  
+
+--add--
+
+A study of the correlation matrix shoes that none of the features stands out in the correlation table.  
+
+-- add 
+
+#### Model 1: Applying 4 classification models, Logistic Regression, Decision Tree, KNN and SVM
+
+Nonetheless, 4 different classification models with default settings were used to make predictions on the depressed group:
+- Logistic Regression
+- Decision Tree
+- kNearestNeighbors
+- Support Vector Machine
+
+Based on the accuracy, recall and f1 scores, the initial findings show that none of the 4 models were good enough for predicting depression.  I would like to highlight that even though accuracy appears to be around 72 - 83%, it was no better than simply doing nothing.  (If we predict everyone is not depressed and simply do nothing, we would be correct 83% of the time.) 
+
+- add
+
+The following confusion matrix also demonstrates that most times, the models did not pick out any truely depressed cases.  
+
+-add
+
+Hence, the initial 4 models were disregarded and are not good enough for deployment. 
+
+#### Model 2:  Applying GridSearchCV on Logistic Regression and KNN
+
+Since the initial models were trained on the default settings, I assumed that running GridSearchCV with scoring = 'recall' will be the solution to making the models run better.  I proceeded to apply GridSearchCV on both KNN and Logistic Regression models.  The results of the KNN-GridSearch was 
+
+-add
+
+and the results from the Logistic Regression-GridSearch was 
+
+-add
+
+Based on the above, the Logistic Regression-GridSearch was no better than the KNN-GridSearch in optimising the recall and f1 scoring.  
+Hence, I decided to vary the code to collate the proba and vary the threshold for classification.  This was applied to both the KNN and the Logistic Regression models.  
+
+Again, these 2 models run on GridSearchCV were disregarded and considered not good enough for deployment.  
+
+####  Model 3: Optimising the Logistic Regression by varying probability threshold 
+
+Next, the probability measures were collated by varying the probability threshold and determine if the recall value increases by varying its probabilities. In this instance, if the model's probability prediction > probability threshold, then depression = 1, else 0.  The following chart rightly depicts that as probability threshold decreases, accuracy drops while recall increases.  
+
+- add
+
+Based on the chart above, when threshold is 14%, the drop in accuracy was very low compared to the improvement in recall.  Also, a recall of greater than 0.7 seems like a good value for the study.  The following shows the confusion matrix using probability threshold = 14%.  
+
+- add
+
+I added workload measure here to understand the percentage of personnels needed to be screened for depressed.  The overall results of this model is 
+
+- add
+
+
+
+####  Model 4: Optimising the KNN by varying probability threshold 
+
+Similarly, the same methodology of varying probability threshold was repeated on KNN model.  The model showed 3 distinct clusters of results.  This is likely due to the n_neighbors factors. Again, the following chart rightly depicts that as probability threshold decreases, accuracy drops while recall increases.  
+
+-add
+
+Based on the chart above, when threshold is 19%, the recall exceeds 0.9 which a very good value for the study.  The confusion matrix using probability threshold = 19% is shown here.  
+
+-add
+
+The results of KNN with probability threshold = 19% are shown below. 
+
+-add
+
+#### Best model - Model 4 is winner!!!!
+
+As models 3 and 4 perform significantly better than the models 1 and 2, a quick comparision of the latter 2 models were made by plotting the recall-accuracy on the same chart and displaying the results in the same table.  
+
+-add
+
+-add 
+
+Based on a comparison of the different models and the objective set out in the problem statement, I would have deployed Model 4: KNN Model that categorised an individual as high risk requiring further medical assessment at the 19% probability level.  This is so far the best model as ~90% of the depressed will be called for further assessment and the workload is not extreme, i.e. ~56% of population.
+
+
 ### Next steps
 What suggestions do you have for next steps?
+
+Next Steps and recommendations:
+
+1. It is recommended that the KNN model be deployed for the next campaign and new data be collated to further refine the model
+
+2. Even though this is a classification model, a time series model can be deployed if there is sufficient data collated over a few years to study the effectiveness of this deployed model.  Also, it may be good for future data to include personnels at risk of depression so that a person can seek treatment before he/ she becomes clinically depressed.
+
+3.  Other than endogeneous factors, exogeneous factors such as weather and economic status of the country can have an impact on a person's wellbeing.  Hence, other external data may be populated to make the study more complete. 
+
 
 ### Outline of project
 

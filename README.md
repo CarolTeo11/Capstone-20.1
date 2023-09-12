@@ -137,7 +137,6 @@ and the results from the Logistic Regression-GridSearch was
 
 <img width="580" alt="image" src="https://github.com/CarolTeo11/Capstone-20.1/assets/130137674/c879b790-c113-44d4-a34b-883a39d6526c">
 
-
 Based on the above, the Logistic Regression-GridSearch was no better than the KNN-GridSearch in optimising the recall and f1 scoring.  
 Hence, I decided to vary the code to collate the proba and vary the threshold for classification.  This was applied to both the KNN and the Logistic Regression models.  
 
@@ -147,39 +146,40 @@ Again, these 2 models run on GridSearchCV were disregarded and considered not go
 
 Next, the probability measures were collated by varying the probability threshold and determine if the recall value increases by varying its probabilities. In this instance, if the model's probability prediction > probability threshold, then depression = 1, else 0.  The following chart rightly depicts that as probability threshold decreases, accuracy drops while recall increases.  
 
-- add
+<img width="550" alt="image" src="https://github.com/CarolTeo11/Capstone-20.1/assets/130137674/3a006267-ae30-4e94-8ae6-dbc814478fa4">
 
-Based on the chart above, when threshold is 14%, the drop in accuracy was very low compared to the improvement in recall.  Also, a recall of greater than 0.7 seems like a good value for the study.  The following shows the confusion matrix using probability threshold = 14%.  
+Based on the chart above, when threshold is 13%, recall exceeds 70% while accuracy was short of 40%.  Also, a recall of greater than 0.7 seems like a good value for the study.  The following shows the confusion matrix using probability threshold = 13%.  
 
-- add
+<img width="550" alt="image" src="https://github.com/CarolTeo11/Capstone-20.1/assets/130137674/c2eab411-4d96-4928-892b-d4a90bfa0c03">
 
 I added workload measure here to understand the percentage of personnels needed to be screened for depressed.  The overall results of this model is 
 
-- add
-
+<img width="550" alt="image" src="https://github.com/CarolTeo11/Capstone-20.1/assets/130137674/030b6ef3-b7a9-4582-9d38-8ce11ec16f52">
 
 
 ####  Model 4: Optimising the KNN by varying probability threshold 
 
 Similarly, the same methodology of varying probability threshold was repeated on KNN model.  The model showed 3 distinct clusters of results.  This is likely due to the n_neighbors factors. Again, the following chart rightly depicts that as probability threshold decreases, accuracy drops while recall increases.  
 
--add
+<img width="550" alt="image" src="https://github.com/CarolTeo11/Capstone-20.1/assets/130137674/fc099e8c-0843-460e-8224-e6cff5457554">
 
 Based on the chart above, when threshold is 19%, the recall exceeds 0.9 which a very good value for the study.  The confusion matrix using probability threshold = 19% is shown here.  
 
--add
+<img width="550" alt="image" src="https://github.com/CarolTeo11/Capstone-20.1/assets/130137674/617e9558-0857-49de-be1f-4aa4fdf53d6f">
 
 The results of KNN with probability threshold = 19% are shown below. 
 
--add
+<img width="550" alt="image" src="https://github.com/CarolTeo11/Capstone-20.1/assets/130137674/8bc73183-2395-4239-95ef-2be0a3af5099">
+
 
 #### Best model - Model 4 is winner!!!!
 
 As models 3 and 4 perform significantly better than the models 1 and 2, a quick comparision of the latter 2 models were made by plotting the recall-accuracy on the same chart and displaying the results in the same table.  
 
--add
+<img width="550" alt="image" src="https://github.com/CarolTeo11/Capstone-20.1/assets/130137674/d7426ec1-1a35-4d7e-bc96-98683b967d0e">
 
--add 
+<img width="550" alt="image" src="https://github.com/CarolTeo11/Capstone-20.1/assets/130137674/28951cf8-7ff6-47b9-b8b5-a946783c8060">
+
 
 Based on a comparison of the different models and the objective set out in the problem statement, I would have deployed Model 4: KNN Model that categorised an individual as high risk requiring further medical assessment at the 19% probability level.  This is so far the best model as ~90% of the depressed will be called for further assessment and the workload is not extreme, i.e. ~56% of population.
 

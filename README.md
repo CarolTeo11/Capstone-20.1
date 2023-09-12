@@ -92,7 +92,6 @@ depressed: target data, with [Zero: No depressed] and [One: depressed] (Binary f
 The data was split 70-30 into the train and test sets.
 
 ### Methodology
-What methods are you using to answer the question?
 
 In this example, I used a few methodologies for 'binary' classification models, namely, KNN, Logistic Regression, SVM, and Decision Tree.  
 

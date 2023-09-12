@@ -4,7 +4,7 @@
 
 
 ### Executive summary
-
+ 
 This project uses routine survey data from Kenya to predict depression.  In rural areas where psychiatric help is limited, it is important to be able to accurately predict the illness so that valuable resources can be allocated to assess and treat these cases.   
 
 #### Background

@@ -100,11 +100,11 @@ Thereafter, I used GridSearch CV to optimise the results on Logistic Regression 
 #### Statistical Analysis on the dataset
 First, it was observed that the dataset is an imbalanced dataset with 16.68% being diagnosed as depressed.  This implies that if we deploy a very simple model that categorises all individuals as being no-depressed, then our accuracy would already have been 83.32%.  
 
--<img width="432" alt="image" src="https://github.com/CarolTeo11/Capstone-20.1/assets/130137674/f271bb90-b0b1-4508-835c-6b55e6d635de">
+-<img width="550" alt="image" src="https://github.com/CarolTeo11/Capstone-20.1/assets/130137674/f271bb90-b0b1-4508-835c-6b55e6d635de">
 
 A study of the correlation matrix shoes that none of the features stands out in the correlation table.  
 
-<img width="392" alt="image" src="https://github.com/CarolTeo11/Capstone-20.1/assets/130137674/52cc13eb-b38c-42f5-9381-3ab1413e8eba">
+<img width="450" alt="image" src="https://github.com/CarolTeo11/Capstone-20.1/assets/130137674/52cc13eb-b38c-42f5-9381-3ab1413e8eba">
 
 #### Model 1: Applying 4 classification models, Logistic Regression, Decision Tree, KNN and SVM
 
@@ -116,14 +116,14 @@ Nonetheless, 4 different classification models with default settings were used t
 
 Based on the accuracy, precision, recall and f1 scores, the initial findings show that none of the 4 models were good enough for predicting depression.  I would like to highlight that even though accuracy appears to be around 72 - 83%, it was no better than simply doing nothing.  (If we predict everyone is not depressed and simply do nothing, we would be correct 83% of the time.) 
 
-<img width="383" alt="image" src="https://github.com/CarolTeo11/Capstone-20.1/assets/130137674/f72390e0-2fcb-486a-9248-ffcb861144c0">
+<img width="550" alt="image" src="https://github.com/CarolTeo11/Capstone-20.1/assets/130137674/f72390e0-2fcb-486a-9248-ffcb861144c0">
 
 The following confusion matrix also demonstrates that most times, the models did not pick out any truely depressed cases.  
 
-<img width="232" alt="image" src="https://github.com/CarolTeo11/Capstone-20.1/assets/130137674/612f85cd-44c2-4fb4-bd45-3359b1cd33df">
-<img width="230" alt="image" src="https://github.com/CarolTeo11/Capstone-20.1/assets/130137674/2b23901e-03d2-4799-992b-4fdb078b09ed">
-<img width="241" alt="image" src="https://github.com/CarolTeo11/Capstone-20.1/assets/130137674/ef3e611e-0a4c-41a0-b6b3-60f1a6a3fda2">
-<img width="227" alt="image" src="https://github.com/CarolTeo11/Capstone-20.1/assets/130137674/04f4b987-9055-4881-9155-574de46e3698">
+<img width="350" alt="image" src="https://github.com/CarolTeo11/Capstone-20.1/assets/130137674/612f85cd-44c2-4fb4-bd45-3359b1cd33df">
+<img width="350" alt="image" src="https://github.com/CarolTeo11/Capstone-20.1/assets/130137674/2b23901e-03d2-4799-992b-4fdb078b09ed">
+<img width="350" alt="image" src="https://github.com/CarolTeo11/Capstone-20.1/assets/130137674/ef3e611e-0a4c-41a0-b6b3-60f1a6a3fda2">
+<img width="350" alt="image" src="https://github.com/CarolTeo11/Capstone-20.1/assets/130137674/04f4b987-9055-4881-9155-574de46e3698">
 
 Hence, the initial 4 models were disregarded and are not good enough for deployment. 
 
@@ -131,12 +131,12 @@ Hence, the initial 4 models were disregarded and are not good enough for deploym
 
 Since the initial models were trained on the default settings, I assumed that running GridSearchCV with scoring = 'recall' will be the solution to making the models run better.  I proceeded to apply GridSearchCV on both KNN and Logistic Regression models.  The results of the KNN-GridSearch was 
 
-<img width="390" alt="image" src="https://github.com/CarolTeo11/Capstone-20.1/assets/130137674/74e1ff3d-f245-4cf3-9f1a-b72d643861e7">
-
+<img width="550" alt="image" src="https://github.com/CarolTeo11/Capstone-20.1/assets/130137674/74e1ff3d-f245-4cf3-9f1a-b72d643861e7">
 
 and the results from the Logistic Regression-GridSearch was 
 
--add
+<img width="500" alt="image" src="https://github.com/CarolTeo11/Capstone-20.1/assets/130137674/c879b790-c113-44d4-a34b-883a39d6526c">
+
 
 Based on the above, the Logistic Regression-GridSearch was no better than the KNN-GridSearch in optimising the recall and f1 scoring.  
 Hence, I decided to vary the code to collate the proba and vary the threshold for classification.  This was applied to both the KNN and the Logistic Regression models.  

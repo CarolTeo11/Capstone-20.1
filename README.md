@@ -197,8 +197,8 @@ Next Steps and recommendations:
 
 ### Outline of project
 
-- [Link to notebook 1]()
-- [Link to notebook 2]()
+- [Link to data](https://github.com/CarolTeo11/Capstone-20.1/blob/main/depressed.csv)
+- [Link to python code]()
 - [Link to notebook 3]()
 
 

@@ -114,13 +114,16 @@ Nonetheless, 4 different classification models with default settings were used t
 - kNearestNeighbors
 - Support Vector Machine
 
-Based on the accuracy, recall and f1 scores, the initial findings show that none of the 4 models were good enough for predicting depression.  I would like to highlight that even though accuracy appears to be around 72 - 83%, it was no better than simply doing nothing.  (If we predict everyone is not depressed and simply do nothing, we would be correct 83% of the time.) 
+Based on the accuracy, precision, recall and f1 scores, the initial findings show that none of the 4 models were good enough for predicting depression.  I would like to highlight that even though accuracy appears to be around 72 - 83%, it was no better than simply doing nothing.  (If we predict everyone is not depressed and simply do nothing, we would be correct 83% of the time.) 
 
-- add
+<img width="383" alt="image" src="https://github.com/CarolTeo11/Capstone-20.1/assets/130137674/f72390e0-2fcb-486a-9248-ffcb861144c0">
 
 The following confusion matrix also demonstrates that most times, the models did not pick out any truely depressed cases.  
 
--add
+<img width="232" alt="image" src="https://github.com/CarolTeo11/Capstone-20.1/assets/130137674/612f85cd-44c2-4fb4-bd45-3359b1cd33df">
+<img width="230" alt="image" src="https://github.com/CarolTeo11/Capstone-20.1/assets/130137674/2b23901e-03d2-4799-992b-4fdb078b09ed">
+<img width="241" alt="image" src="https://github.com/CarolTeo11/Capstone-20.1/assets/130137674/ef3e611e-0a4c-41a0-b6b3-60f1a6a3fda2">
+<img width="227" alt="image" src="https://github.com/CarolTeo11/Capstone-20.1/assets/130137674/04f4b987-9055-4881-9155-574de46e3698">
 
 Hence, the initial 4 models were disregarded and are not good enough for deployment. 
 

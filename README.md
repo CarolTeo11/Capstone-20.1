@@ -131,7 +131,8 @@ Hence, the initial 4 models were disregarded and are not good enough for deploym
 
 Since the initial models were trained on the default settings, I assumed that running GridSearchCV with scoring = 'recall' will be the solution to making the models run better.  I proceeded to apply GridSearchCV on both KNN and Logistic Regression models.  The results of the KNN-GridSearch was 
 
--add
+<img width="390" alt="image" src="https://github.com/CarolTeo11/Capstone-20.1/assets/130137674/74e1ff3d-f245-4cf3-9f1a-b72d643861e7">
+
 
 and the results from the Logistic Regression-GridSearch was 
 

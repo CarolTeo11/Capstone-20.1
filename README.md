@@ -86,7 +86,7 @@ no_lasting_investmen
 
 depressed: target data, with [Zero: No depressed] and [One: depressed] (Binary for target class)
 
-The data was split 70-30 into the train and test sets.
+The data was split 70-30 into the train and test sets but "stratify = y" to ensure the proportion of depressed does not change despite the split.
 
 ### Methodology
 

@@ -135,7 +135,7 @@ Since the initial models were trained on the default settings, I assumed that ru
 
 and the results from the Logistic Regression-GridSearch was 
 
-<img width="500" alt="image" src="https://github.com/CarolTeo11/Capstone-20.1/assets/130137674/c879b790-c113-44d4-a34b-883a39d6526c">
+<img width="580" alt="image" src="https://github.com/CarolTeo11/Capstone-20.1/assets/130137674/c879b790-c113-44d4-a34b-883a39d6526c">
 
 
 Based on the above, the Logistic Regression-GridSearch was no better than the KNN-GridSearch in optimising the recall and f1 scoring.  

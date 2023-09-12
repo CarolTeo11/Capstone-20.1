@@ -17,7 +17,6 @@ Even though this challenge was done a while ago, the data remains relevant for d
 
 
 ### Rationale
-Why should anyone care about this question?
 
 Depression, if left untreated, can become an issue for the individual and their family members.  The issue can be exercerbated if the person is the sole breadwinner of the family.  However, in a country faced with poverty and limited medical resources, there is a need to prioritise such resources. 
 
@@ -25,9 +24,8 @@ Hence, in this assessment, i hope to be able to predict true positive with high 
 
 
 ### Research Question
-What are you trying to answer?
 
-Classify, with high accuracy, the personnels with depression.  
+Classify, with high accuracy, the persons with depression.  
 
 Measures of Effectiveness:  
 1.  Minimize False Negative ==> Metrics: Maximise Recall = True Positive/ (True Positive + False Negative) 

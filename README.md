@@ -28,11 +28,15 @@ Hence, in this assessment, i hope to be able to predict true positive with high 
 Classify, with high accuracy, the persons with depression.  
 
 Measures of Effectiveness:  
+
 1.  Minimize False Negative ==> Metrics: Maximise Recall = True Positive/ (True Positive + False Negative)
 
 Secondary Measures of Effectiveness:
+
 2.  Maximize accuracy 
+
 3.  Minimize False Postive (to minimise unnecessary resources allocated) ==> Metrics: Maximize Precision = True Positive/ (True Positive + False Positive) 
+
 4.  Maximize f1 scores
 
 ### Data Sources

@@ -33,7 +33,6 @@ Measures of Effectiveness:
 
 
 ### Data Sources
-What data will you use to answer you question?
 
 I obtained a set of data from Kaggl for this analysis. The web address is https://www.kaggle.com/datasets/diegobabativa/depression
 

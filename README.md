@@ -181,7 +181,7 @@ As models 3 and 4 perform significantly better than the models 1 and 2, a quick 
 <img width="550" alt="image" src="https://github.com/CarolTeo11/Capstone-20.1/assets/130137674/28951cf8-7ff6-47b9-b8b5-a946783c8060">
 
 
-Based on a comparison of the different models and the objective set out in the problem statement, I would have deployed Model 4: KNN Model that categorised an individual as high risk requiring further medical assessment at the 19% probability level.  This is so far the best model as ~90% of the depressed will be called for further assessment and the workload is not extreme, i.e. ~56% of population.
+Based on a comparison of the different models and the objective set out in the problem statement, I would have deployed Model 4: KNN Model that categorised an individual as high risk requiring further medical assessment at the 19% probability level.  This is so far the best model as ~75% of the depressed will be called for further assessment and the workload is not extreme, i.e. ~61% of population.
 
 
 ### Next steps
@@ -200,7 +200,6 @@ Next Steps and recommendations:
 
 - [Link to data](https://github.com/CarolTeo11/Capstone-20.1/blob/main/depressed.csv)
 - [Link to python code]()
-- [Link to notebook 3]()
 
 
-##### Contact and Further Information
+

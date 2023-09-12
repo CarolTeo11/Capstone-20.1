@@ -161,7 +161,7 @@ I added workload measure here to understand the percentage of personnels needed 
 
 Similarly, the same methodology of varying probability threshold was repeated on KNN model.  The model showed 3 distinct clusters of results.  This is likely due to the n_neighbors factors. Again, the following chart rightly depicts that as probability threshold decreases, accuracy drops while recall increases.  
 
-<img width="550" alt="image" src="https://github.com/CarolTeo11/Capstone-20.1/assets/130137674/fc099e8c-0843-460e-8224-e6cff5457554">
+<img width="550" alt="image" src="https://github.com/CarolTeo11/Capstone-20.1/assets/130137674/35c7a56d-0f41-4bd8-b349-fdf1620d69d9">
 
 Based on the chart above, when threshold is 19%, the recall exceeds 0.9 which a very good value for the study.  The confusion matrix using probability threshold = 19% is shown here.  
 

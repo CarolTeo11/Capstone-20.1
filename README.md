@@ -192,7 +192,6 @@ Based on a comparison of the different models and the objective set out in the p
 
 
 ### Next steps
-What suggestions do you have for next steps?
 
 Next Steps and recommendations:
 

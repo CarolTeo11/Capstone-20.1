@@ -2,6 +2,7 @@
 
 - by CT
 
+<img width="800" alt="image" src="https://github.com/CarolTeo11/Capstone-20.1/assets/130137674/c16b915f-7ab5-40c9-897a-b8d589034398">
 
 ### Executive summary
  

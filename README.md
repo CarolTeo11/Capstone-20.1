@@ -100,16 +100,15 @@ Thereafter, I used GridSearch CV to optimise the results on Logistic Regression 
 
 
 ### Results
-What did your research find?
 
 #### Statistical Analysis on the dataset
 First, it was observed that the dataset is an imbalanced dataset with 16.68% being diagnosed as depressed.  This implies that if we deploy a very simple model that categorises all individuals as being no-depressed, then our accuracy would already have been 83.32%.  
 
---add--
+-<img width="432" alt="image" src="https://github.com/CarolTeo11/Capstone-20.1/assets/130137674/f271bb90-b0b1-4508-835c-6b55e6d635de">
 
 A study of the correlation matrix shoes that none of the features stands out in the correlation table.  
 
--- add 
+<img width="392" alt="image" src="https://github.com/CarolTeo11/Capstone-20.1/assets/130137674/52cc13eb-b38c-42f5-9381-3ab1413e8eba">
 
 #### Model 1: Applying 4 classification models, Logistic Regression, Decision Tree, KNN and SVM
 
